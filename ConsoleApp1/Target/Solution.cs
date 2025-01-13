@@ -14,9 +14,7 @@ namespace ConsoleApp1.Target
             {
                 K += 1;
                 soma += K;
-
             }
-
             return soma;
         }
 
@@ -47,12 +45,11 @@ namespace ConsoleApp1.Target
             return valoresValidos.Max();
         }
 
-        public double FaturamentoDiarioValoresValidosMedia(List<double> faturamentos)
+        public int FaturamentoDiarioValoresValidosMedia(List<double> faturamentos)
         {
             var valoresValidos = faturamentos.Where(x => x > 0).ToList();
             double mediaMensal = valoresValidos.Average();
-            int diasAcimaDaMedia = valoresValidos.Count(v => v > mediaMensal);
-            return diasAcimaDaMedia;
+            return valoresValidos.Count(v => v > mediaMensal);
         }
 
         public Dictionary<string, double> FaturamentoPorEstado(Dictionary<string, double> faturamentosPorEstado)
@@ -70,7 +67,6 @@ namespace ConsoleApp1.Target
 
             return percentuaisPorEstado;
         }
-
 
         public string InvertString(string texto)
         {
