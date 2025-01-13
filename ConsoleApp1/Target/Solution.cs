@@ -20,19 +20,19 @@ namespace ConsoleApp1.Target
             return soma;
         }
 
-        public bool PertenceFibonacci(int nuemro)
+        public bool PertenceFibonacci(int numero)
         {
             int a = 0;
             int b = 1;
             int temp;
 
-            while (a < nuemro)
+            while (a < numero)
             {
                 temp = a;
                 a = b;
                 b = temp + b;
             }
-            return a == 0;
+            return a == numero;
         }
 
         public double FaturamentoDiarioValoresValidosMin(List<double> faturamentos)
